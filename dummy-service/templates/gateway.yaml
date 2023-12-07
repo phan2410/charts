@@ -1,0 +1,16 @@
+{{- if and .Values.istio_ingress.enabled (not .Values.istio_ingress.gateway) .Values.istio_ingress.selector }}
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: {{ include "dummy-service.fullname" . }}-gateway
+spec:
+  selector:
+    {{- tpl (toYaml .Values.istio_ingress.selector) . | nindent 4 }}
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+{{- end }}

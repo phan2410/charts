@@ -1,0 +1,24 @@
+{{- if and .Values.istio_ingress.enabled (or .Values.istio_ingress.selector .Values.istio_ingress.gateway) }}
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ include "dummy-service.fullname" . }}
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - {{ if .Values.istio_ingress.gateway }}
+      {{- .Values.istio_ingress.gateway }}
+    {{- else }}
+      {{- include "dummy-service.fullname" . }}-gateway
+    {{- end }}
+  http:
+  - match:
+    - uri:
+        prefix: "/"
+    route:
+    - destination:
+        host: {{ include "dummy-service.fullname" . }}
+        port:
+          number: {{ .Values.port }}
+{{- end }}
