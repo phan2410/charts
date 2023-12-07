@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  dummy-service:
+  - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2023-12-07T16:57:16.983467174+07:00"
+    description: A Helm chart for phan2410/dummy-service
+    digest: 613df4341e55dcd15be11733c28a53f25d3c3d06ff927b92521fbbc1c3e1b4b5
+    icon: https://avatars.githubusercontent.com/u/15082536?v=4
+    name: dummy-service
+    type: application
+    urls:
+    - https://phan2410.github.io/charts/dummy-service/dummy-service-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-12-07T16:57:16.982988687+07:00"
