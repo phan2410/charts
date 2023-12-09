@@ -71,6 +71,11 @@ istio_ingress:
   selector:
     istio: ingress
   gateway: ""  # if empty, gateway will be created if ingress selector exists
+  virtual_service:  # if omit or empty, no virtual service will be created
+    http:
+    - match:
+      - uri:
+          prefix: "/"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

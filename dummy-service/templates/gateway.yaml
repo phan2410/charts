@@ -3,6 +3,8 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: {{ include "dummy-service.fullname" . }}-gateway
+  labels:
+      {{- include "dummy-service.labels" . | nindent 4 }}
 spec:
   selector:
     {{- tpl (toYaml .Values.istio_ingress.selector) . | nindent 4 }}
