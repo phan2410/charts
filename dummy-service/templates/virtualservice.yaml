@@ -1,25 +1,22 @@
-{{- if and .Values.istio_ingress.enabled (or .Values.istio_ingress.selector .Values.istio_ingress.gateway)  (.Values.istio_ingress.virtual_service).http }}
+{{- if and .Values.istio_vs.enabled .Values.istio_vs.http }}
+{{- $fullName := include "dummy-service.fullname" . -}}
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: {{ include "dummy-service.fullname" . }}
+  name: {{ .Values.istio_vs.name | default $fullName }}
   labels:
       {{- include "dummy-service.labels" . | nindent 4 }}
 spec:
   hosts:
   - "*"
   gateways:
-  - {{ if .Values.istio_ingress.gateway }}
-      {{- .Values.istio_ingress.gateway }}
-    {{- else }}
-      {{- include "dummy-service.fullname" . }}-gateway
-    {{- end }}
+  - {{ default (include "dummy-service.istioGatewayName" .) .Values.istio_vs.gateway }}
   http:
-  {{- range .Values.istio_ingress.virtual_service.http }}
+  {{- range .Values.istio_vs.http }}
   - {{ if not .route -}}
     route:
     - destination:
-        host: {{ include "dummy-service.fullname" $ }}
+        host: {{ $fullName }}
         port:
           number: {{ $.Values.port }}
     {{- end }}

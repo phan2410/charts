@@ -60,3 +60,10 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Create the name of the istio gateway to use
+*/}}
+{{- define "dummy-service.istioGatewayName" -}}
+{{- default (include "dummy-service.fullname" .) .Values.istio_gateway.name }}
+{{- end }}

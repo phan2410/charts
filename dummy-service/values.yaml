@@ -11,8 +11,20 @@ image:
   tag: ""
 
 debug: true
-appid: 1234
+appid: ""
 port: &port 8081
+entrypoint: {}
+#  command: []
+#  args: []
+#  workingDir: ""
+
+envVars:
+  - name: DEBUG
+    value: "{{ .Values.debug }}"
+  - name: PORT
+    value: "{{ .Values.port }}"
+  - name: APPID
+    value: "{{ .Values.appid | default (randAlphaNum 8) }}"
 
 httpGetHealth: &httpGetHealth
   port: *port
@@ -64,18 +76,37 @@ service:
   type: ClusterIP
   port: *port
 
-istio_ingress:
-  enabled: true
-  # The selector matches the ingress gateway pod labels.
+istio_gateway:
+  enabled: false
+  # The selector matches the ingress pod labels.
   # If you installed Istio using Helm following the standard documentation, this would be "istio=ingress"
   selector:
     istio: ingress
-  gateway: ""  # if empty, gateway will be created if ingress selector exists
-  virtual_service:  # if omit or empty, no virtual service will be created
-    http:
-    - match:
-      - uri:
-          prefix: "/"
+  name: ""
+
+istio_vs:
+  enabled: false
+  name: ""
+  gateway: ""
+  http:
+  - match:
+    - uri:
+        prefix: "/"
+
+ingress:
+  enabled: false
+  name: ""
+  className: "nginx"
+  annotations: {}
+  hosts:
+    - host: "*"
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -94,7 +125,20 @@ autoscaling:
   minReplicas: 1
   maxReplicas: 100
   targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
+
+# Additional volumes on the output Deployment definition.
+volumes: []
+# - name: foo
+#   secret:
+#     secretName: mysecret
+#     optional: false
+
+# Additional volumeMounts on the output Deployment definition.
+volumeMounts: []
+# - name: foo
+#   mountPath: "/etc/foo"
+#   readOnly: true
 
 nodeSelector: {}
 
