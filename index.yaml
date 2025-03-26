@@ -3,7 +3,18 @@ entries:
   dummy-service:
   - apiVersion: v2
     appVersion: 0.0.7
-    created: "2025-03-26T22:04:46.205773057+07:00"
+    created: "2025-03-27T00:04:02.115080021+07:00"
+    description: A Helm chart for phan2410/dummy-service
+    digest: 909818e12436441bf8bcfa352fae23d2c39e5ca5c48b71cd60dbe6a831e38ff9
+    icon: https://avatars.githubusercontent.com/u/15082536?v=4
+    name: dummy-service
+    type: application
+    urls:
+    - https://phan2410.github.io/charts/dummy-service/dummy-service-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 0.0.7
+    created: "2025-03-27T00:04:02.114205069+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 32b0ddd9622f2c39b0c1851bd99db31eea9da44f3485630453ff1f04cb565eb5
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -14,7 +25,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2025-03-26T22:04:46.204384746+07:00"
+    created: "2025-03-27T00:04:02.112714107+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 1d3e01c29179a9009554d3e6f81bb88129fe3ff832a35c2c4fddea7cf616c1f1
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -25,7 +36,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2025-03-26T22:04:46.202970674+07:00"
+    created: "2025-03-27T00:04:02.111333602+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: c29789d53382e28de944815e11a95ccca3be64f1de9c7c3e14b57c404907bb2d
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -36,7 +47,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2025-03-26T22:04:46.20231681+07:00"
+    created: "2025-03-27T00:04:02.109881679+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 4260e3dc45c2057e242b118fd9e7053da2bbebf7396618fb06e66c21a2ecda14
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -47,7 +58,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2025-03-26T22:04:46.201657024+07:00"
+    created: "2025-03-27T00:04:02.108489283+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 00daa66571d684a0396758bd25e6f30b1595ad1ef6554ccf8276abb46379f11a
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -58,7 +69,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2025-03-26T22:04:46.201126038+07:00"
+    created: "2025-03-27T00:04:02.107346499+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 613df4341e55dcd15be11733c28a53f25d3c3d06ff927b92521fbbc1c3e1b4b5
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -67,4 +78,4 @@ entries:
     urls:
     - https://phan2410.github.io/charts/dummy-service/dummy-service-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-26T22:04:46.200458297+07:00"
+generated: "2025-03-27T00:04:02.105747954+07:00"
