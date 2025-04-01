@@ -3,7 +3,18 @@ entries:
   dummy-service:
   - apiVersion: v2
     appVersion: 0.0.8
-    created: "2025-04-01T09:16:36.539502242+07:00"
+    created: "2025-04-01T17:28:19.099989526+07:00"
+    description: A Helm chart for phan2410/dummy-service
+    digest: b65ee3a3069021f30fdc43dd2e7a90da06635c723278da6f2e795409538fffe4
+    icon: https://avatars.githubusercontent.com/u/15082536?v=4
+    name: dummy-service
+    type: application
+    urls:
+    - https://phan2410.github.io/charts/dummy-service/dummy-service-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
+    appVersion: 0.0.8
+    created: "2025-04-01T17:28:19.099620137+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: d52b40e91b838bd1a3109ce2efd6670f08afaf729c06dfe7f0778cb9db8dea53
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -14,7 +25,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 0.0.7
-    created: "2025-04-01T09:16:36.539169763+07:00"
+    created: "2025-04-01T17:28:19.098946667+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 909818e12436441bf8bcfa352fae23d2c39e5ca5c48b71cd60dbe6a831e38ff9
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -25,7 +36,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.0.7
-    created: "2025-04-01T09:16:36.538831264+07:00"
+    created: "2025-04-01T17:28:19.098262721+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 32b0ddd9622f2c39b0c1851bd99db31eea9da44f3485630453ff1f04cb565eb5
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -36,7 +47,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2025-04-01T09:16:36.538526119+07:00"
+    created: "2025-04-01T17:28:19.097499312+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 1d3e01c29179a9009554d3e6f81bb88129fe3ff832a35c2c4fddea7cf616c1f1
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -47,7 +58,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2025-04-01T09:16:36.538203203+07:00"
+    created: "2025-04-01T17:28:19.096772824+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: c29789d53382e28de944815e11a95ccca3be64f1de9c7c3e14b57c404907bb2d
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -58,7 +69,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2025-04-01T09:16:36.537863492+07:00"
+    created: "2025-04-01T17:28:19.096027936+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 4260e3dc45c2057e242b118fd9e7053da2bbebf7396618fb06e66c21a2ecda14
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -69,7 +80,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2025-04-01T09:16:36.537527656+07:00"
+    created: "2025-04-01T17:28:19.095301755+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 00daa66571d684a0396758bd25e6f30b1595ad1ef6554ccf8276abb46379f11a
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -80,7 +91,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2025-04-01T09:16:36.537256378+07:00"
+    created: "2025-04-01T17:28:19.094786704+07:00"
     description: A Helm chart for phan2410/dummy-service
     digest: 613df4341e55dcd15be11733c28a53f25d3c3d06ff927b92521fbbc1c3e1b4b5
     icon: https://avatars.githubusercontent.com/u/15082536?v=4
@@ -92,7 +103,7 @@ entries:
   falcon-asgi-server:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2025-04-01T09:16:36.540159216+07:00"
+    created: "2025-04-01T17:28:19.100903301+07:00"
     dependencies:
     - name: dummy-service
       repository: https://phan2410.github.io/charts
@@ -105,4 +116,4 @@ entries:
     urls:
     - https://phan2410.github.io/charts/falcon-asgi-server/falcon-asgi-server-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-01T09:16:36.536878572+07:00"
+generated: "2025-04-01T17:28:19.094126812+07:00"
